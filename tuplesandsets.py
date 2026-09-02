@@ -1,21 +1,18 @@
-keys = ['a','b','c','d']
-values = [1,2,3]
-x=list(zip(keys,values))
-y=dict(zip(keys,values))
-print(x)
-print(y)
-#converting string into dictionary using ast
-import ast
-st= "{'name':'john','age':30}"
-d2= ast.literal_eval(st)
-print(d29)
+
 d1 = {
     'name':'john',
     'age':31,
     'car':'ford',
     'year' :1991,
 }
-d1['year']=2022
-print(d1)
-d1.update({'year':2030})
-print(d1)
+for key,value in d1.items():
+    print(f'{key=}and {value=}')
+d2 = {'a':3,'c':2,'b':1,'d':4}
+print(d2.items())
+x=dict(sorted(d2.items()))
+print(x)
+d3={'a':3,'b':4,'c':3,'d':5}
+def f1(d):
+    for key ,val in d.items():
+        print(key,val)
+f1(d1)
